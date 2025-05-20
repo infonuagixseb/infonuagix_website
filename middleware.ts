@@ -8,9 +8,10 @@ const defaultLocale = 'en';
 export default createMiddleware({
   locales,
   defaultLocale,
-  localePrefix: 'as-needed',
-  pathnames: {}, // Explicitly provide an empty pathnames configuration
-  localeDetection: false, // Explicitly disable locale detection based on headers
+  localePrefix: 'as-needed'
+  // Removed explicit pathnames: {}
+  // Removed explicit localeDetection: false 
+  // Let next-intl use its defaults, which might involve reading i18n.ts
 });
 
 export const config = {
