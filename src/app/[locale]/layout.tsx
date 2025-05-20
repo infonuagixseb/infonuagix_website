@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import '../globals.css'; // Path relative to this file
 import { Toaster } from "@/components/ui/toaster";
 import {NextIntlClientProvider} from 'next-intl';
-import {getMessages, getTranslator} from 'next-intl/server';
+import {getMessages, getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import { locales } from '@/i18n';
 
@@ -21,7 +21,7 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   if (!locales.includes(locale)) {
     notFound();
   }
-  const t = await getTranslator(locale, 'Metadata');
+  const t = await getTranslations({locale, namespace: 'Metadata'});
   return {
     title: t('title'),
     description: t('description'),
