@@ -1,23 +1,6 @@
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { HeroSection } from '@/components/sections/HeroSection';
-import { BenefitsSection } from '@/components/sections/BenefitsSection';
-import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
-import { ContactSection } from '@/components/sections/ContactSection';
-import { Chatbot } from '@/components/chatbot/Chatbot';
-
+// This file is obsolete and has been replaced by src/app/[locale]/page.tsx
+// You can delete this file.
+// Keeping it temporarily to avoid build errors if referenced, but it should be removed.
 export default function HomePage() {
-  return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <Header />
-      <main className="flex-grow">
-        <HeroSection />
-        <BenefitsSection />
-        <TestimonialsSection />
-        <ContactSection />
-      </main>
-      <Footer />
-      <Chatbot />
-    </div>
-  );
+  return <div>Please navigate to /en or /fr</div>;
 }

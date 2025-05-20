@@ -1,34 +1,6 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
-import { Toaster } from "@/components/ui/toaster";
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
-
-export const metadata: Metadata = {
-  title: 'Infonuagix Digital Solutions',
-  description: 'Infonuagix offers quality web and mobile development with speedy delivery, cost-effective solutions, and dedicated support. Based in EST, serving clients bilingually.',
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
-        <Toaster />
-      </body>
-    </html>
-  );
+// This file is obsolete and has been replaced by src/app/[locale]/layout.tsx
+// You can delete this file.
+// Keeping it temporarily to avoid build errors if referenced, but it should be removed.
+export default function RootLayout({children}: {children: React.ReactNode}) {
+  return <html lang="en"><body>{children}</body></html>;
 }

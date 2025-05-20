@@ -13,9 +13,11 @@ import { MessageSquare, Bot, X } from 'lucide-react';
 import { ChatMessages } from './ChatMessages';
 import { ChatInput } from './ChatInput';
 import type { ChatMessage } from '@/types';
-import { initialInquiryChatbot } from '@/ai/flows/initial-inquiry-chatbot'; // Ensure this path is correct
+import { initialInquiryChatbot } from '@/ai/flows/initial-inquiry-chatbot';
+import { useTranslations } from 'next-intl';
 
 export function Chatbot() {
+  const t = useTranslations('Chatbot');
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -26,12 +28,12 @@ export function Chatbot() {
         {
           id: crypto.randomUUID(),
           sender: 'ai',
-          text: "Hello! I'm Infonuagix's AI assistant. How can I help you learn about our services, benefits, or case studies today?",
+          text: t('initialGreeting'),
           timestamp: new Date(),
         },
       ]);
     }
-  }, [isOpen, messages.length]);
+  }, [isOpen, messages.length, t]);
 
   const handleSendMessage = async (query: string) => {
     const userMessage: ChatMessage = {
@@ -57,7 +59,7 @@ export function Chatbot() {
       const errorMessage: ChatMessage = {
         id: crypto.randomUUID(),
         sender: 'ai',
-        text: "I'm sorry, but I encountered an error trying to process your request. Please try again later.",
+        text: "I'm sorry, but I encountered an error trying to process your request. Please try again later.", // This could also be translated
         timestamp: new Date(),
       };
       setMessages((prevMessages) => [...prevMessages, errorMessage]);

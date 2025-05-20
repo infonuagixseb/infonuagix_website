@@ -1,0 +1,29 @@
+{
+  "Metadata": {
+    "title": "Infonuagix Solutions Numériques",
+    "description": "Infonuagix offre un développement Web et mobile de qualité avec une livraison rapide, des solutions rentables et un support dédié. Basé en EST, au service des clients bilingues."
+  },
+  "Header": {
+    "contactUs": "Contactez-nous",
+    "getAQuote": "Obtenir un devis"
+  },
+  "HeroSection": {
+    "titlePart1": "Solutions Web et Mobiles Innovantes,",
+    "titlePart2": "Conçues avec Vibe.",
+    "description": "Infonuagix exploite le \"vibe coding\" pour fournir des applications web et mobiles de haute qualité et rentables. Bénéficiez d'une livraison rapide, d'une gestion de projet exceptionnelle et d'un support bilingue dédié, le tout depuis notre emplacement nearshore EST.",
+    "ourServices": "Nos Services",
+    "requestAQuote": "Demander un devis"
+  },
+  "Footer": {
+    "copyright": "© {currentYear} Infonuagix. Tous droits réservés.",
+    "operatingTime": "Opérant en HNE (Heure Normale de l'Est). HNE actuelle : {estTime}"
+  },
+  "LanguageSwitcher": {
+    "changeLanguage": "Changer de langue",
+    "english": "Anglais",
+    "french": "Français"
+  },
+  "Chatbot": {
+    "initialGreeting": "Bonjour ! Je suis l'assistant IA d'Infonuagix. Comment puis-je vous aider à découvrir nos services, avantages ou études de cas aujourd'hui ?"
+  }
+}

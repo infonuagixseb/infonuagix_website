@@ -1,0 +1,29 @@
+{
+  "Metadata": {
+    "title": "Infonuagix Digital Solutions",
+    "description": "Infonuagix offers quality web and mobile development with speedy delivery, cost-effective solutions, and dedicated support. Based in EST, serving clients bilingually."
+  },
+  "Header": {
+    "contactUs": "Contact Us",
+    "getAQuote": "Get a Quote"
+  },
+  "HeroSection": {
+    "titlePart1": "Innovative Web & Mobile Solutions,",
+    "titlePart2": "Crafted with Vibe.",
+    "description": "Infonuagix leverages \"vibe coding\" to deliver high-quality, cost-effective web and mobile applications. Experience speedy delivery, exceptional project management, and dedicated bilingual support, all from our nearshore EST location.",
+    "ourServices": "Our Services",
+    "requestAQuote": "Request a Quote"
+  },
+  "Footer": {
+    "copyright": "© {currentYear} Infonuagix. All rights reserved.",
+    "operatingTime": "Operating in EST (Eastern Standard Time). Current EST: {estTime}"
+  },
+  "LanguageSwitcher": {
+    "changeLanguage": "Change language",
+    "english": "English",
+    "french": "French"
+  },
+  "Chatbot": {
+    "initialGreeting": "Hello! I'm Infonuagix's AI assistant. How can I help you learn about our services, benefits, or case studies today?"
+  }
+}

@@ -1,8 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from 'next-intl';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 export function Header() {
+  const t = useTranslations('Header');
+
   return (
     <header className="py-4 px-4 sm:px-6 lg:px-8 bg-background/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between">
@@ -17,12 +21,13 @@ export function Header() {
             data-ai-hint="logo cloud"
           />
         </Link>
-        <nav className="flex items-center space-x-4">
+        <nav className="flex items-center space-x-2 sm:space-x-4">
+          <LanguageSwitcher />
           <Button asChild variant="ghost">
-            <Link href="#contact">Contact Us</Link>
+            <Link href="#contact">{t('contactUs')}</Link>
           </Button>
           <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Link href="#contact">Get a Quote</Link>
+            <Link href="#contact">{t('getAQuote')}</Link>
           </Button>
         </nav>
       </div>
