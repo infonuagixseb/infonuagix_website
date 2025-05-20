@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { useEffect, useRef } from 'react';
 import { submitContactForm, type ContactFormState } from '@/actions/contact';
 import { Button } from '@/components/ui/button';
@@ -21,7 +22,8 @@ function SubmitButton() {
 
 export function ContactSection() {
   const initialState: ContactFormState = { message: null, errors: {} };
-  const [state, formAction] = useFormState(submitContactForm, initialState);
+  // @ts-ignore TODO: Remove @ts-ignore and fix type errors once React.useActionState types are stable
+  const [state, formAction] = useActionState(submitContactForm, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 

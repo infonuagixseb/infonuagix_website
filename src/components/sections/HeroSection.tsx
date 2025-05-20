@@ -25,13 +25,14 @@ export function HeroSection() {
             </div>
           </div>
           <div className="hidden md:block">
-            <Image 
-              src="https://placehold.co/600x400.png" 
-              alt="Abstract digital art" 
-              width={600} 
-              height={400}
+            <Image
+              src="https://static.wixstatic.com/media/967757_638a08988b54477ebb8d3617b9af8890~mv2.jpg/v1/fill/w_404,h_531,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SGP_9296_ppSoniaGuertin.jpg"
+              alt="Portrait of Sonia Guertin"
+              width={404}
+              height={531}
               className="rounded-lg shadow-2xl"
-              data-ai-hint="abstract technology" 
+              data-ai-hint="portrait person"
+              priority
             />
           </div>
         </div>
