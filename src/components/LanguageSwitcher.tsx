@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Globe } from 'lucide-react';
-import { locales } from '@/i18n';
+import { locales } from '../../i18n'; // Updated import path
 
 export function LanguageSwitcher() {
   const t = useTranslations('LanguageSwitcher');
