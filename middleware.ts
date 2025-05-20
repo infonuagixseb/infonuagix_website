@@ -1,3 +1,4 @@
+
 import createMiddleware from 'next-intl/middleware';
 
 // Hardcoded for diagnostic purposes
@@ -9,6 +10,7 @@ export default createMiddleware({
   defaultLocale,
   localePrefix: 'as-needed',
   pathnames: {}, // Explicitly provide an empty pathnames configuration
+  localeDetection: false, // Explicitly disable locale detection based on headers
 });
 
 export const config = {
