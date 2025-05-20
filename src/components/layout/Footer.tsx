@@ -30,7 +30,7 @@ export function Footer() {
     <footer className="py-8 bg-secondary text-secondary-foreground">
       <div className="container mx-auto text-center">
         <p className="text-sm">
-          &copy; {currentYear !== null ? currentYear : '2024'} Infonuagix Digital Solutions. All rights reserved.
+          &copy; {currentYear !== null ? currentYear : '2024'} Infonuagix. All rights reserved.
         </p>
         <p className="text-sm mt-2">
           Operating in EST (Eastern Standard Time). Current EST: {estTime !== null ? estTime : 'Loading...'}
