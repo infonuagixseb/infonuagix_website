@@ -25,16 +25,16 @@ const nextConfig: NextConfig = {
       }
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/en', // Default locale
-        permanent: false, // Or true if you prefer
-        locale: false, // Prevent Next.js from applying its own locale prefixing to the destination
-      },
-    ];
-  },
+  // async redirects() {  // Removed this section
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/en', // Default locale
+  //       permanent: false, 
+  //       locale: false, 
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;
