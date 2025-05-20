@@ -1,3 +1,4 @@
+
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
@@ -23,6 +24,16 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       }
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/en', // Default locale
+        permanent: false, // Or true if you prefer
+        locale: false, // Prevent Next.js from applying its own locale prefixing to the destination
+      },
+    ];
   },
 };
 
