@@ -1,19 +1,22 @@
-
-import type {NextConfig} from 'next';
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'placehold.co',
+        hostname: '**.googleusercontent.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.firebaseapp.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.cloudfunctions.net',
         port: '',
         pathname: '/**',
       },
@@ -25,16 +28,9 @@ const nextConfig: NextConfig = {
       }
     ],
   },
-  // async redirects() {  // Removed this section
-  //   return [
-  //     {
-  //       source: '/',
-  //       destination: '/en', // Default locale
-  //       permanent: false, 
-  //       locale: false, 
-  //     },
-  //   ];
-  // },
+  experimental: {
+    allowedDevOrigins: ['https://9000-firebase-studio-1747779028137.cluster-ux5mmlia3zhhask7riihruxydo.cloudworkstations.dev'],
+  }
 };
 
-export default nextConfig;
+module.exports = nextConfig;

@@ -1,17 +1,18 @@
 
 import createMiddleware from 'next-intl/middleware';
+import { locales, defaultLocale } from './i18n'; // Import from root i18n.ts
 
-// Hardcoded for diagnostic purposes
-const locales = ['en', 'fr'];
-const defaultLocale = 'en';
+console.log('[Middleware] Attempting to use locales from root i18n.ts:', locales);
+console.log('[Middleware] Attempting to use defaultLocale from root i18n.ts:', defaultLocale);
 
 export default createMiddleware({
   locales,
   defaultLocale,
-  localePrefix: 'as-needed'
-  // Removed explicit pathnames: {}
-  // Removed explicit localeDetection: false 
-  // Let next-intl use its defaults, which might involve reading i18n.ts
+  localePrefix: 'as-needed',
+  // Explicitly provide empty pathnames and disable localeDetection
+  // to minimize middleware's reliance on auto-detecting these from a config file.
+  pathnames: {},
+  localeDetection: false,
 });
 
 export const config = {
